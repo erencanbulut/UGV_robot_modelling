@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<robot name="robot" xmlns:xacro="http://ros.org/wiki/xacro">
+	<xacro:include filename="$(find robot_description)/urdf/robot_base.xacro"/>
+	<xacro:include filename="$(find robot_description)/urdf/robot_inertia.xacro"/>
+	<xacro:include filename="$(find robot_description)/urdf/robot_wheel.xacro"/>
+	<xacro:include filename="$(find robot_description)/urdf/robot_differential.xacro"/>
+	<xacro:include filename="$(find robot_description)/urdf/robot_laser.xacro"/>
+	<xacro:include filename="$(find robot_description)/urdf/robot_camera.xacro"/>
+
+	<xacro:robot_base />
+	<xacro:robot_wheel xyz_coordinate="0.0 -0.175 -0.1" rpy_coordinate="0 0 0" direction="left"/>
+	<xacro:robot_wheel xyz_coordinate="0.0 0.175 -0.1" rpy_coordinate="0 0 0" direction="right"/>
+	<xacro:robot_caster_wheel xyz_coordinate="0.2 0.0 -0.15" rpy_coordinate="0 0 0" direction="front"/>
+	<xacro:robot_caster_wheel xyz_coordinate="-0.2 0.0 -0.15" rpy_coordinate="0 0 0" direction="back"/>
+	<xacro:robot_differential />
+	<xacro:robot_laser />
+	<xacro:robot_camera />
+
+</robot>
